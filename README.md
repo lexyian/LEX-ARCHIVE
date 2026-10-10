@@ -1,6 +1,6 @@
 # LEX // ARCHIVE
 
-LEX // ARCHIVE is my personal portfolio website showcasing selected projects across web development, quality assurance, networking, and post-production.
+LEX ARCHIVE is my personal portfolio website showcasing selected projects across web development, quality assurance, networking, and post-production.
 
 Instead of using a standard portfolio grid, the website presents each project as an individual case file with its own layout, project details, role, tools, and contribution.
 
