@@ -1,7 +1,6 @@
 const projects = {
   panelly: {
-    file:
-      "FILE 001",
+    file: "FILE 001",
 
     type:
       "Solo build",
@@ -10,7 +9,7 @@ const projects = {
       "Panelly",
 
     subtitle:
-      "Manga discovery and reading platform.",
+      "Availability-first manga discovery and reading platform.",
 
     role:
       "Designer + Developer",
@@ -19,21 +18,21 @@ const projects = {
       "2026",
 
     stack:
-      "HTML · CSS · JavaScript · AniList API · MangaDex API · Local Storage · Vercel",
+      "HTML · CSS · JavaScript · AniList API · MangaDex API · Jikan API · Local Storage · Vercel",
 
     status:
-      "In development",
+      "Live / core build completed",
 
     preview:
       "assets/images/panelly.jpg",
 
     description:
-      "Panelly is a manga discovery and reading interface that combines series discovery, manga information, available chapters, bookmarks, and reading progress.",
+      "Panelly is an availability-first manga discovery and reading interface that combines series discovery, GL/BL and origin-focused browsing, available chapters, bookmarks, and locally stored reading progress.",
 
     contribution: [
       "Designed the responsive interface and visual identity.",
-      "Built search, browse, detail, and reader experiences.",
-      "Used AniList for catalog information and MangaDex for available hosted chapters.",
+      "Built search, genre, GL/BL, manga, manhwa, and manhua discovery flows.",
+      "Used external APIs for catalog information and available hosted chapters instead of maintaining an independent manga library.",
       "Added bookmarks and Continue Reading using Local Storage.",
       "Deployed and tested the project on Vercel."
     ],
@@ -62,13 +61,13 @@ const projects = {
       "FILE 002",
 
     type:
-      "Solo build",
+      "Solo build / active",
 
     title:
       "HireLens",
 
     subtitle:
-      "Interview practice platform for students, fresh graduates, and job seekers.",
+      "Interview practice studio for students, fresh graduates, career shifters, and job seekers.",
 
     role:
       "Designer + Developer",
@@ -80,23 +79,66 @@ const projects = {
       "HTML · CSS · JavaScript · Web Speech API · Vercel",
 
     status:
-      "Stage 1 in build",
+      "Stage 1 working / AI layer planned",
+
+    preview:
+      "assets/images/hirelens-setup.png",
+
+    description:
+      "HireLens is a career-spanning interview practice product with career-area and job-role selection, behavioral and role-specific question flows, typed or spoken answers, browser transcription, timers, progress tracking, and a session debrief. The secure AI feedback layer is planned for a later stage.",
+
+    contribution: [
+      "Designed the editorial Interview Studio interface and responsive session flow.",
+      "Expanded setup beyond IT into multiple career areas with role and custom-role selection.",
+      "Built behavioral, role-specific, difficulty, and question-count logic for preset practice.",
+      "Implemented typed answers, timers, word counts, session progress, and results review.",
+      "Added browser speech recognition with a typed fallback and preserved editable transcripts.",
+      "Kept AI feedback, authentication, and saved sessions clearly separated as future stages."
+    ],
+
+    links: []
+  },
+
+  auragen: {
+    file:
+      "FILE 003",
+
+    type:
+      "Solo build / planned",
+
+    title:
+      "AURA//GEN",
+
+    subtitle:
+      "Interactive Generative Art Studio.",
+
+    role:
+      "Designer + Developer",
+
+    year:
+      "2026",
+
+    stack:
+      "HTML · CSS · JavaScript · Canvas API · Local Storage · PWA",
+
+    status:
+      "Concept in development",
 
     preview:
       "",
 
     fallback:
-      "HL / 002",
+      "A/G / 003",
 
     description:
-      "HireLens is an interview-practice product built around realistic question flows, spoken or typed answers, timers, session review, and a later secure AI feedback layer.",
+      "AURA//GEN is a planned creative-coding web application and installable PWA where users will create animated artwork through flow fields, particle systems, orbital motion, moods, palettes, seeded generation, pointer interaction, saved presets, and image export.",
 
     contribution: [
-      "Designed the product direction and responsive interview flow.",
-      "Built role, interview type, difficulty, and question-count setup.",
-      "Implemented typed answers, timers, word counts, and progress tracking.",
-      "Added browser speech recognition with typed fallback.",
-      "Structured the project so AI and saved sessions can be added later."
+      "Defined the product concept, creative direction, and phased development plan.",
+      "Planned Flow Field, Particle System, Orbit, and Fractal Garden generator modes.",
+      "Designed a Mood Engine concept that changes multiple visual parameters through emotional presets.",
+      "Planned seeded generation, palette controls, local saved creations, PNG export, and PWA support.",
+      "Keeping advanced Mood Canvas, audio-reactive visuals, and animation recording as later phases rather than presenting them as completed features."
     ],
 
     links: []
@@ -104,7 +146,7 @@ const projects = {
 
   eduhub: {
     file:
-      "FILE 003",
+      "FILE 004",
 
     type:
       "Team project",
@@ -154,7 +196,7 @@ const projects = {
 
   wanlab: {
     file:
-      "FILE 004",
+      "FILE 005",
 
     type:
       "Pair laboratory",
@@ -199,7 +241,7 @@ const projects = {
 
   hintayan: {
     file:
-      "FILE 005",
+      "FILE 006",
 
     type:
       "Creative project",
@@ -217,7 +259,7 @@ const projects = {
       "2026",
 
     stack:
-      "DaVinci Resolve · Edit · Color · Fairlight",
+      "DaVinci Resolve · Edit · Fusion · Color · Fairlight",
 
     status:
       "Academic film project",
@@ -226,17 +268,17 @@ const projects = {
       "",
 
     fallback:
-      "H(T) / 005",
+      "H(T) / 006",
 
     description:
-      "Hin(taya)n is a short-film project where I handled editing work across the main film and promotional cuts, with attention to pacing, transitions, color, audio, titles, and continuity.",
+      "Hin(taya)n is a short-film project where I handled editing work across the main film and promotional cuts, with attention to pacing, transitions, color, audio, titles, stabilization, and continuity.",
 
     contribution: [
-      "Edited the full film and promotional cuts.",
-      "Worked on pacing, transitions, and continuity.",
+      "Edited the full film, teaser, and trailer.",
+      "Worked on pacing, POV and flashback transitions, stabilization, and continuity.",
       "Developed separate visual looks for present-day and flashback scenes.",
       "Handled audio cleanup, ambience, and supporting sound effects.",
-      "Built titles and other post-production elements in DaVinci Resolve."
+      "Built titles, logo animation, and other post-production elements in DaVinci Resolve."
     ],
 
     links: []
@@ -370,9 +412,11 @@ function renderDialogPreview(
     if (
       project.previewClass
     ) {
-      dialogPreview.classList.add(
-        project.previewClass
-      );
+      dialogPreview
+        .classList
+        .add(
+          project.previewClass
+        );
     }
 
     dialogPreview.innerHTML = `
@@ -398,7 +442,9 @@ function openProject(
   projectKey
 ) {
   const project =
-    projects[projectKey];
+    projects[
+      projectKey
+    ];
 
   if (!project) {
     return;
@@ -473,11 +519,13 @@ function openProject(
   );
 
   document.body
-    .classList.add(
+    .classList
+    .add(
       "dialog-open"
     );
 
-  projectDialog.showModal();
+  projectDialog
+    .showModal();
 }
 
 function closeProject() {
@@ -488,7 +536,8 @@ function closeProject() {
   }
 
   document.body
-    .classList.remove(
+    .classList
+    .remove(
       "dialog-open"
     );
 }
@@ -499,57 +548,66 @@ document
   )
   .forEach(
     (button) => {
-      button.addEventListener(
-        "click",
-        () => {
-          openProject(
-            button.dataset.project
-          );
-        }
-      );
+      button
+        .addEventListener(
+          "click",
+          () => {
+            openProject(
+              button.dataset
+                .project
+            );
+          }
+        );
     }
   );
 
-dialogClose.addEventListener(
-  "click",
-  closeProject
-);
+dialogClose
+  .addEventListener(
+    "click",
+    closeProject
+  );
 
-projectDialog.addEventListener(
-  "click",
-  (event) => {
-    if (
-      event.target ===
-      projectDialog
-    ) {
-      closeProject();
+projectDialog
+  .addEventListener(
+    "click",
+    (event) => {
+      if (
+        event.target ===
+        projectDialog
+      ) {
+        closeProject();
+      }
     }
-  }
-);
+  );
 
-projectDialog.addEventListener(
-  "close",
-  () => {
-    document.body
-      .classList.remove(
-        "dialog-open"
-      );
-  }
-);
+projectDialog
+  .addEventListener(
+    "close",
+    () => {
+      document.body
+        .classList
+        .remove(
+          "dialog-open"
+        );
+    }
+  );
 
-jumpButton.addEventListener(
-  "click",
-  () => {
-    jumpDialog.showModal();
-  }
-);
+jumpButton
+  .addEventListener(
+    "click",
+    () => {
+      jumpDialog
+        .showModal();
+    }
+  );
 
-jumpClose.addEventListener(
-  "click",
-  () => {
-    jumpDialog.close();
-  }
-);
+jumpClose
+  .addEventListener(
+    "click",
+    () => {
+      jumpDialog.close();
+    }
+  );
 
 jumpDialog
   .querySelectorAll(
@@ -557,93 +615,102 @@ jumpDialog
   )
   .forEach(
     (button) => {
-      button.addEventListener(
-        "click",
-        () => {
-          const target =
-            document.getElementById(
-              button.dataset.jump
-            );
+      button
+        .addEventListener(
+          "click",
+          () => {
+            const target =
+              document
+                .getElementById(
+                  button.dataset
+                    .jump
+                );
 
-          jumpDialog.close();
+            jumpDialog.close();
 
-          target?.scrollIntoView({
-            behavior:
-              "smooth"
-          });
-        }
-      );
+            target
+              ?.scrollIntoView({
+                behavior:
+                  "smooth"
+              });
+          }
+        );
     }
   );
 
-document.addEventListener(
-  "keydown",
-  (event) => {
-    const activeElement =
-      document.activeElement;
+document
+  .addEventListener(
+    "keydown",
+    (event) => {
+      const activeElement =
+        document.activeElement;
 
-    const tagName =
-      activeElement?.tagName;
-
-    if (
-      event.key === "/" &&
-      tagName !== "INPUT" &&
-      tagName !== "TEXTAREA" &&
-      !projectDialog.open
-    ) {
-      event.preventDefault();
+      const tagName =
+        activeElement
+          ?.tagName;
 
       if (
-        !jumpDialog.open
+        event.key === "/" &&
+        tagName !== "INPUT" &&
+        tagName !== "TEXTAREA" &&
+        !projectDialog.open
       ) {
-        jumpDialog.showModal();
+        event.preventDefault();
+
+        if (
+          !jumpDialog.open
+        ) {
+          jumpDialog
+            .showModal();
+        }
+      }
+
+      if (
+        event.key ===
+          "Escape" &&
+        jumpDialog.open
+      ) {
+        jumpDialog.close();
       }
     }
+  );
 
-    if (
-      event.key ===
-        "Escape" &&
-      jumpDialog.open
-    ) {
-      jumpDialog.close();
-    }
-  }
-);
-
-randomProjectButton.addEventListener(
-  "click",
-  () => {
-    const keys =
-      [
+randomProjectButton
+  .addEventListener(
+    "click",
+    () => {
+      const keys = [
         "panelly",
         "hirelens",
+        "auragen",
         "eduhub",
         "wanlab",
         "hintayan"
       ];
 
-    const randomKey =
-      keys[
-        Math.floor(
-          Math.random() *
-          keys.length
-        )
-      ];
+      const randomKey =
+        keys[
+          Math.floor(
+            Math.random() *
+            keys.length
+          )
+        ];
 
-    document
-      .getElementById(
-        randomKey
-      )
-      ?.scrollIntoView({
-        behavior:
-          "smooth"
-      });
-  }
-);
+      document
+        .getElementById(
+          randomKey
+        )
+        ?.scrollIntoView({
+          behavior:
+            "smooth"
+        });
+    }
+  );
 
 function updateScrollProgress() {
   const totalHeight =
-    document.documentElement
+    document
+      .documentElement
       .scrollHeight -
     window.innerHeight;
 
@@ -655,50 +722,70 @@ function updateScrollProgress() {
         ) * 100
       : 0;
 
-  scrollProgress.style.width =
-    `${Math.min(
-      100,
-      Math.max(
-        0,
-        percentage
-      )
-    )}%`;
+  scrollProgress
+    .style
+    .width =
+      `${Math.min(
+        100,
+        Math.max(
+          0,
+          percentage
+        )
+      )}%`;
 }
 
-window.addEventListener(
-  "scroll",
-  updateScrollProgress,
-  {
-    passive: true
-  }
-);
+window
+  .addEventListener(
+    "scroll",
+    updateScrollProgress,
+    {
+      passive: true
+    }
+  );
 
 updateScrollProgress();
 
 if (
   wanTopologyImage
 ) {
-  wanTopologyImage.addEventListener(
-    "load",
-    () => {
-      wanPlaceholder.style.display =
-        "none";
-    }
-  );
+  wanTopologyImage
+    .addEventListener(
+      "load",
+      () => {
+        if (
+          wanPlaceholder
+        ) {
+          wanPlaceholder
+            .style
+            .display =
+              "none";
+        }
+      }
+    );
 
-  wanTopologyImage.addEventListener(
-    "error",
-    () => {
-      wanTopologyImage.style.display =
-        "none";
+  wanTopologyImage
+    .addEventListener(
+      "error",
+      () => {
+        wanTopologyImage
+          .style
+          .display =
+            "none";
 
-      wanPlaceholder.style.display =
-        "grid";
-    }
-  );
+        if (
+          wanPlaceholder
+        ) {
+          wanPlaceholder
+            .style
+            .display =
+              "grid";
+        }
+      }
+    );
 }
 
-const portfolioEmail = "lexpanerio@gmail.com";
+const portfolioEmail =
+  "lexpanerio@gmail.com";
 
 if (
   portfolioEmail
@@ -707,30 +794,34 @@ if (
     "Copy email";
 }
 
-emailButton.addEventListener(
-  "click",
-  async () => {
-    if (
-      !portfolioEmail
-    ) {
-      emailStatus.textContent =
-        "Add your portfolio email inside app.js before publishing.";
+emailButton
+  .addEventListener(
+    "click",
+    async () => {
+      if (
+        !portfolioEmail
+      ) {
+        emailStatus
+          .textContent =
+            "Email is not available yet.";
 
-      return;
+        return;
+      }
+
+      try {
+        await navigator
+          .clipboard
+          .writeText(
+            portfolioEmail
+          );
+
+        emailStatus
+          .textContent =
+            "Email copied.";
+      } catch {
+        emailStatus
+          .textContent =
+            portfolioEmail;
+      }
     }
-
-    try {
-      await navigator
-        .clipboard
-        .writeText(
-          portfolioEmail
-        );
-
-      emailStatus.textContent =
-        "Email copied.";
-    } catch {
-      emailStatus.textContent =
-        portfolioEmail;
-    }
-  }
-);
+  );
