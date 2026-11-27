@@ -1887,6 +1887,15 @@ img {
   word-break: normal;
 }
 
+.smartflow-official-title {
+  max-width: 560px;
+  margin: -4px 0 18px;
+  color: #5b5a54;
+  font-size: 0.76rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
 .smartflow-preview {
   position: relative;
   isolation: isolate;
