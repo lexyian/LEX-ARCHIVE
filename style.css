@@ -1875,6 +1875,240 @@ img {
   }
 }
 
+
+/* SMARTFLOW planned-concept dashboard preview */
+.project-smartflow .project-copy h2 {
+  max-width: 100%;
+  font-size: clamp(3.1rem, 5.2vw, 5.2rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.smartflow-preview {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  padding: clamp(22px, 4vw, 54px);
+  overflow: hidden;
+  color: #edf4f5;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(63, 153, 166, 0.22), transparent 32%),
+    linear-gradient(145deg, #101c22, #172b32 58%, #102027);
+}
+
+.smartflow-preview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(220, 245, 245, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 245, 245, 0.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.smartflow-dashboard {
+  width: min(100%, 620px);
+  padding: clamp(17px, 2.5vw, 28px);
+  border: 1px solid rgba(208, 231, 231, 0.2);
+  border-radius: 12px;
+  background: rgba(9, 21, 26, 0.92);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.smartflow-dashboard-top,
+.smartflow-card-heading,
+.smartflow-chart-axis,
+.smartflow-inspection-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.smartflow-dashboard-top {
+  margin-bottom: 22px;
+}
+
+.smartflow-dashboard-top > div,
+.smartflow-alert-row > div,
+.smartflow-inspection-row > div {
+  display: grid;
+  gap: 6px;
+}
+
+.smartflow-kicker,
+.smartflow-card-heading > span,
+.smartflow-chart-axis,
+.smartflow-inspection-row > div > span {
+  color: #8da9ad;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.smartflow-dashboard-top strong {
+  font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+  letter-spacing: -0.04em;
+}
+
+.smartflow-concept-chip,
+.smartflow-alert-chip,
+.smartflow-inspection-status {
+  flex: 0 0 auto;
+  padding: 7px 9px;
+  border: 1px solid rgba(125, 204, 190, 0.35);
+  border-radius: 3px;
+  color: #9be0c9;
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+}
+
+.smartflow-reading-card {
+  padding: 16px;
+  border: 1px solid rgba(190, 219, 220, 0.13);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.smartflow-card-heading small {
+  color: #82999d;
+  font-size: 0.65rem;
+}
+
+.smartflow-chart {
+  height: 155px;
+  display: flex;
+  align-items: end;
+  gap: clamp(5px, 1.2vw, 11px);
+  margin: 18px 0 12px;
+  padding: 12px 8px 0;
+  border-bottom: 1px solid rgba(187, 218, 219, 0.25);
+  background: repeating-linear-gradient(to bottom, transparent 0 37px, rgba(187, 218, 219, 0.1) 38px 39px);
+}
+
+.smartflow-chart span {
+  flex: 1;
+  height: var(--bar-height);
+  min-width: 5px;
+  border-radius: 3px 3px 0 0;
+  background: linear-gradient(180deg, #78d6c2, #397f86);
+  opacity: 0.88;
+}
+
+.smartflow-chart-axis {
+  font-size: 0.52rem;
+}
+
+.smartflow-alert-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid rgba(232, 176, 102, 0.24);
+  border-radius: 7px;
+  background: rgba(232, 176, 102, 0.07);
+}
+
+.smartflow-alert-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #e8b066;
+  box-shadow: 0 0 13px rgba(232, 176, 102, 0.45);
+}
+
+.smartflow-alert-row strong,
+.smartflow-inspection-row strong {
+  font-size: 0.8rem;
+}
+
+.smartflow-alert-row small {
+  color: #a6b7b8;
+  font-size: 0.64rem;
+  line-height: 1.45;
+}
+
+.smartflow-alert-chip {
+  margin-left: auto;
+  border-color: rgba(232, 176, 102, 0.35);
+  color: #e8b066;
+}
+
+.smartflow-inspection-row {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid rgba(190, 219, 220, 0.13);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.smartflow-inspection-status {
+  color: #c4d2d2;
+  border-color: rgba(190, 219, 220, 0.25);
+  letter-spacing: 0;
+}
+
+.smartflow-stamp {
+  color: #d2e4e3;
+}
+
+@media (max-width: 1000px) {
+  .project-smartflow .project-copy h2 {
+    font-size: clamp(3.2rem, 9vw, 5.2rem);
+  }
+
+  .smartflow-dashboard {
+    width: min(100%, 680px);
+  }
+}
+
+@media (max-width: 700px) {
+  .project-smartflow .project-copy h2 {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+
+  .smartflow-preview {
+    min-height: 540px;
+    padding: 18px 12px;
+  }
+
+  .smartflow-dashboard {
+    padding: 14px;
+  }
+
+  .smartflow-dashboard-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .smartflow-chart {
+    height: 125px;
+  }
+
+  .smartflow-alert-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .smartflow-alert-chip {
+    margin-left: 21px;
+  }
+
+  .smartflow-inspection-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 1000px) {
   .site-header {
     grid-template-columns:
