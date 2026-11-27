@@ -38,7 +38,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css"
+    href="style.css?v=smartflow-motion-20261127"
   >
 </head>
 
@@ -1256,7 +1256,14 @@
 
         <div class="project-preview smartflow-preview">
 
-          <div class="smartflow-dashboard" aria-label="Concept preview of the planned SmartFlow monitoring dashboard">
+          <div class="smartflow-particles" aria-hidden="true">
+            <span class="smartflow-particle particle-one"></span>
+            <span class="smartflow-particle particle-two"></span>
+            <span class="smartflow-particle particle-three"></span>
+            <span class="smartflow-particle particle-four"></span>
+          </div>
+
+          <div class="smartflow-dashboard" aria-label="Animated concept preview of the planned SmartFlow monitoring dashboard">
 
             <div class="smartflow-dashboard-top">
               <div>
@@ -1268,25 +1275,22 @@
 
             <div class="smartflow-reading-card">
               <div class="smartflow-card-heading">
-                <span>FLOW READING</span>
+                <span>FLOW PATTERN</span>
                 <small>Illustrative pattern only</small>
               </div>
+
               <div class="smartflow-chart" aria-hidden="true">
-                <span style="--bar-height:34%"></span>
-                <span style="--bar-height:43%"></span>
-                <span style="--bar-height:39%"></span>
-                <span style="--bar-height:52%"></span>
-                <span style="--bar-height:47%"></span>
-                <span style="--bar-height:63%"></span>
-                <span style="--bar-height:55%"></span>
-                <span style="--bar-height:72%"></span>
-                <span style="--bar-height:60%"></span>
-                <span style="--bar-height:82%"></span>
-                <span style="--bar-height:66%"></span>
-                <span style="--bar-height:74%"></span>
+                <svg class="smartflow-flow-svg" viewBox="0 0 600 150" preserveAspectRatio="none">
+                  <path class="smartflow-line-base" d="M8 94 C40 90 64 101 98 95 S155 91 190 96 S250 101 285 95 S340 91 390 96" />
+                  <path class="smartflow-line-spike" d="M390 96 L420 25 L446 103 L470 94" />
+                  <path class="smartflow-line-tail" d="M470 94 C510 90 550 101 592 94" />
+                  <circle class="smartflow-spike-halo" cx="420" cy="25" r="13" />
+                  <circle class="smartflow-spike-marker" cx="420" cy="25" r="4.5" />
+                </svg>
               </div>
+
               <div class="smartflow-chart-axis">
-                <span>HISTORICAL FLOW</span>
+                <span>FLOW PATTERN / CONCEPT</span>
                 <span>NO LIVE DATA</span>
               </div>
             </div>
@@ -1305,7 +1309,11 @@
                 <span>FIELD INSPECTION</span>
                 <strong>Inspection status</strong>
               </div>
-              <span class="smartflow-inspection-status">Pending review</span>
+              <span class="smartflow-inspection-status">
+                <span class="inspection-pending">Pending review</span>
+                <span class="inspection-assigned">Assigned</span>
+                <span class="inspection-active">Inspecting</span>
+              </span>
             </div>
 
           </div>
