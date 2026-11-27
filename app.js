@@ -156,6 +156,26 @@ const projects = {
       "Built titles and other post-production elements in DaVinci Resolve."
     ],
     links: []
+  },
+
+  smartflow: {
+    file: "FILE 008",
+    type: "Team capstone · Technology development",
+    title: "SmartFlow",
+    subtitle: "IoT-assisted water-flow anomaly detection and leak-alert decision support.",
+    role: "System Analyst",
+    year: "2026",
+    stack: "React.js · Flutter · Node.js · Express.js · PostgreSQL · Python · Scikit-learn · IoT sensors / microcontroller · JWT · Agile Scrum",
+    status: "Title approved · In planning",
+    preview: "",
+    fallback: "SMARTFLOW / 008",
+    description: "SMARTFLOW is a planned web and mobile decision-support system for a selected water district in Dasmariñas, Cavite. IoT water-flow sensors and machine-learning anomaly detection are intended to flag potential leaks, notify authorized personnel, and support field inspections. An alert indicates a potential anomaly only; it does not confirm a leak or its location, and physical inspection remains necessary. The proposed project aligns with SDGs 6, 9, and 11.",
+    contribution: [
+      "Assigned as System Analyst for the team capstone project.",
+      "Planning the system scope around water-flow monitoring, anomaly alerts, and field-inspection support.",
+      "The analyst documentation and modeling deliverables remain to be confirmed; no requirements, use cases, DFD, ERD, or SRS are presented as completed."
+    ],
+    links: []
   }
 };
 
@@ -557,7 +577,8 @@ randomProjectButton.addEventListener(
         "auragen",
         "eduhub",
         "wanlab",
-        "hintayan"
+        "hintayan",
+        "smartflow"
       ];
 
     const randomKey =
