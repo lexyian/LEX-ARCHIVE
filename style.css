@@ -1896,11 +1896,13 @@ img {
   overflow-wrap: anywhere;
 }
 
-.smartflow-preview {
+.project-section.project-smartflow .project-preview.smartflow-preview {
   position: relative;
   isolation: isolate;
   display: grid;
   place-items: center;
+  width: 100%;
+  min-width: 0;
   padding: clamp(22px, 4vw, 54px);
   overflow: hidden;
   color: #edf4f5;
@@ -1914,7 +1916,7 @@ img {
   position: absolute;
   inset: 0;
   z-index: -1;
-  opacity: 0.18;
+  opacity: 0.2;
   background-image:
     linear-gradient(rgba(220, 245, 245, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(220, 245, 245, 0.12) 1px, transparent 1px);
@@ -1922,11 +1924,14 @@ img {
 }
 
 .smartflow-dashboard {
+  position: relative;
+  z-index: 1;
   width: min(100%, 620px);
-  padding: clamp(17px, 2.5vw, 28px);
+  min-width: 0;
+  padding: clamp(16px, 2.5vw, 28px);
   border: 1px solid rgba(208, 231, 231, 0.2);
   border-radius: 12px;
-  background: rgba(9, 21, 26, 0.92);
+  background: rgba(9, 21, 26, 0.94);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
@@ -1948,6 +1953,7 @@ img {
 .smartflow-alert-row > div,
 .smartflow-inspection-row > div {
   display: grid;
+  min-width: 0;
   gap: 6px;
 }
 
@@ -1980,6 +1986,7 @@ img {
 }
 
 .smartflow-reading-card {
+  min-width: 0;
   padding: 16px;
   border: 1px solid rgba(190, 219, 220, 0.13);
   border-radius: 7px;
@@ -1992,23 +1999,73 @@ img {
 }
 
 .smartflow-chart {
-  height: 155px;
-  display: flex;
-  align-items: end;
-  gap: clamp(5px, 1.2vw, 11px);
+  position: relative;
+  width: 100%;
+  height: clamp(112px, 16vw, 155px);
   margin: 18px 0 12px;
-  padding: 12px 8px 0;
+  overflow: hidden;
   border-bottom: 1px solid rgba(187, 218, 219, 0.25);
-  background: repeating-linear-gradient(to bottom, transparent 0 37px, rgba(187, 218, 219, 0.1) 38px 39px);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 37px,
+    rgba(187, 218, 219, 0.1) 38px 39px
+  );
 }
 
-.smartflow-chart span {
-  flex: 1;
-  height: var(--bar-height);
-  min-width: 5px;
-  border-radius: 3px 3px 0 0;
-  background: linear-gradient(180deg, #78d6c2, #397f86);
-  opacity: 0.88;
+.smartflow-flow-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.smartflow-flow-svg path {
+  fill: none;
+  stroke: #78d6c2;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.smartflow-line-base {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: smartflowBaseDraw 9s ease-in-out infinite;
+}
+
+.smartflow-line-spike {
+  stroke: #f1bd76 !important;
+  stroke-width: 3.5 !important;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: smartflowSpikeDraw 9s ease-in-out infinite;
+}
+
+.smartflow-line-tail {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: smartflowTailDraw 9s ease-in-out infinite;
+}
+
+.smartflow-spike-halo {
+  fill: rgba(241, 189, 118, 0.16);
+  stroke: rgba(241, 189, 118, 0.35);
+  stroke-width: 1;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: smartflowMarkerPulse 9s ease-in-out infinite;
+}
+
+.smartflow-spike-marker {
+  fill: #ffd18f;
+  stroke: #fff0d7;
+  stroke-width: 1.5;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: smartflowMarkerPulse 9s ease-in-out infinite;
 }
 
 .smartflow-chart-axis {
@@ -2024,6 +2081,9 @@ img {
   border: 1px solid rgba(232, 176, 102, 0.24);
   border-radius: 7px;
   background: rgba(232, 176, 102, 0.07);
+  opacity: 0;
+  transform: translateY(9px);
+  animation: smartflowAlertIn 9s ease-in-out infinite;
 }
 
 .smartflow-alert-dot {
@@ -2061,16 +2121,134 @@ img {
 }
 
 .smartflow-inspection-status {
+  position: relative;
+  display: inline-grid;
+  min-width: 112px;
+  min-height: 28px;
+  place-items: center;
   color: #c4d2d2;
   border-color: rgba(190, 219, 220, 0.25);
   letter-spacing: 0;
+}
+
+.smartflow-inspection-status > span {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
+
+.inspection-pending {
+  animation: smartflowPending 9s linear infinite;
+}
+
+.inspection-assigned {
+  animation: smartflowAssigned 9s linear infinite;
+}
+
+.inspection-active {
+  animation: smartflowInspecting 9s linear infinite;
 }
 
 .smartflow-stamp {
   color: #d2e4e3;
 }
 
-@media (max-width: 1000px) {
+.smartflow-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.smartflow-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8de7d5;
+  box-shadow: 0 0 14px rgba(141, 231, 213, 0.7);
+  opacity: 0.55;
+  animation: smartflowDrift 9s ease-in-out infinite;
+}
+
+.particle-one {
+  top: 18%;
+  left: 12%;
+}
+
+.particle-two {
+  top: 34%;
+  right: 11%;
+  width: 4px;
+  height: 4px;
+  animation-delay: -2s;
+}
+
+.particle-three {
+  bottom: 20%;
+  left: 18%;
+  width: 3px;
+  height: 3px;
+  animation-delay: -4.5s;
+}
+
+.particle-four {
+  right: 23%;
+  bottom: 13%;
+  width: 4px;
+  height: 4px;
+  animation-delay: -6.5s;
+}
+
+@keyframes smartflowBaseDraw {
+  0%, 3% { stroke-dashoffset: 520; }
+  38%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes smartflowSpikeDraw {
+  0%, 43% { stroke-dashoffset: 180; }
+  51%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes smartflowTailDraw {
+  0%, 52% { stroke-dashoffset: 150; }
+  65%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes smartflowMarkerPulse {
+  0%, 48% { opacity: 0; transform: scale(0.55); }
+  53% { opacity: 1; transform: scale(1.15); }
+  62%, 77% { opacity: 0.9; transform: scale(1); }
+  86%, 100% { opacity: 0; transform: scale(0.7); }
+}
+
+@keyframes smartflowAlertIn {
+  0%, 52% { opacity: 0; transform: translateY(9px); }
+  60%, 88% { opacity: 1; transform: translateY(0); }
+  96%, 100% { opacity: 0; transform: translateY(5px); }
+}
+
+@keyframes smartflowPending {
+  0%, 30% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+
+@keyframes smartflowAssigned {
+  0%, 32% { opacity: 0; }
+  35%, 62% { opacity: 1; }
+  66%, 100% { opacity: 0; }
+}
+
+@keyframes smartflowInspecting {
+  0%, 65% { opacity: 0; }
+  68%, 100% { opacity: 1; }
+}
+
+@keyframes smartflowDrift {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.25; }
+  50% { transform: translate3d(13px, -18px, 0); opacity: 0.8; }
+}
+
+@media (max-width: 1100px) {
   .project-smartflow .project-copy h2 {
     font-size: clamp(3.2rem, 9vw, 5.2rem);
   }
@@ -2099,8 +2277,8 @@ img {
     flex-direction: column;
   }
 
-  .smartflow-chart {
-    height: 125px;
+  .smartflow-reading-card {
+    padding: 12px;
   }
 
   .smartflow-alert-row {
@@ -2458,5 +2636,28 @@ img {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .smartflow-line-base,
+  .smartflow-line-spike,
+  .smartflow-line-tail {
+    stroke-dashoffset: 0 !important;
+  }
+
+  .smartflow-spike-halo,
+  .smartflow-spike-marker,
+  .smartflow-alert-row {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .smartflow-inspection-status .inspection-pending,
+  .smartflow-inspection-status .inspection-assigned {
+    display: none !important;
+  }
+
+  .smartflow-inspection-status .inspection-active {
+    display: inline !important;
+    opacity: 1 !important;
   }
 }
