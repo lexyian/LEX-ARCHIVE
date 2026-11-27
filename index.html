@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="LEX // ARCHIVE — selected work across web development, QA, networking, creative coding, and post-production."
+    content="LEX // ARCHIVE — selected work across web development, QA, system analysis, networking, creative coding, and post-production."
   >
 
   <meta
@@ -122,7 +122,7 @@
         <div class="hero-main">
 
           <p class="eyebrow">
-            Developer / QA / Creative
+            Developer / QA / System Analyst / Creative
           </p>
 
           <h1>
@@ -209,35 +209,42 @@
               <small>Web / APIs</small>
             </a>
 
-            <a href="#hirelens">
+            <a href="#noircinema">
               <span>02</span>
+              <strong>NOIR Cinema</strong>
+              <small>Web / Full-stack</small>
+            </a>
+
+            <a href="#hirelens">
+              <span>03</span>
               <strong>HireLens</strong>
               <small>Web / Speech</small>
             </a>
 
             <a href="#auragen">
-              <span>03</span>
+              <span>04</span>
               <strong>AURA//GEN</strong>
               <small>Creative coding</small>
             </a>
 
             <a href="#eduhub">
-              <span>04</span>
+              <span>05</span>
               <strong>EduHub</strong>
               <small>Frontend / QA</small>
             </a>
 
             <a href="#wanlab">
-              <span>05</span>
+              <span>06</span>
               <strong>WAN Lab</strong>
               <small>Networking</small>
             </a>
 
             <a href="#hintayan">
-              <span>06</span>
+              <span>07</span>
               <strong>Hin(taya)n</strong>
               <small>Post-production</small>
             </a>
+
 
           </div>
 
@@ -305,8 +312,6 @@
 
     </section>
 
-    <!-- PANELLY -->
-
     <section
       class="project-section project-panelly"
       id="panelly"
@@ -339,10 +344,9 @@
             </h2>
 
             <p class="project-description">
-              An availability-first manga discovery
-              and reading interface built with
-              vanilla JavaScript, external APIs,
-              bookmarks, and reading progress.
+              A manga discovery and reading interface
+              built with vanilla JavaScript, external
+              APIs, bookmarks, and reading progress.
             </p>
 
             <dl class="project-meta">
@@ -404,10 +408,12 @@
 
             <div class="browser-toolbar">
 
-              <div>
+              <div aria-hidden="true">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
               </div>
 
               <p>
@@ -420,23 +426,16 @@
 
             </div>
 
-            <div class="panelly-image">
+            <div class="panelly-live-window">
 
-              <img
-                src="assets/images/panelly.jpg"
-                alt="Panelly manga discovery website"
-              >
+              <iframe
+                src="https://panelly-delta.vercel.app/"
+                title="Panelly live website preview"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
 
             </div>
-
-          </div>
-
-          <div class="panelly-secondary">
-
-            <img
-              src="assets/images/panelly0.jpg"
-              alt="Additional Panelly website view"
-            >
 
           </div>
 
@@ -450,7 +449,150 @@
 
     </section>
 
-    <!-- HIRELENS -->
+
+    <section
+      class="project-section project-noir"
+      id="noircinema"
+    >
+
+      <div class="project-inner section-shell">
+
+        <div class="project-info">
+
+          <div class="project-file-line">
+
+            <span>
+              FILE 002
+            </span>
+
+            <span>
+              SOLO BUILD / LIVE
+            </span>
+
+          </div>
+
+          <div class="project-copy">
+
+            <p class="eyebrow">
+              Web application / Cinema
+            </p>
+
+            <h2>
+              NOIR Cinema
+            </h2>
+
+            <p class="project-description">
+              A cinema website built around a dynamic movie
+              catalogue and movie-management workflow. The
+              frontend connects to an Express API, movie records
+              are stored in MongoDB Atlas, and poster images are
+              hosted through Cloudinary.
+            </p>
+
+            <dl class="project-meta">
+
+              <div>
+
+                <dt>
+                  ROLE
+                </dt>
+
+                <dd>
+                  Designer + Developer
+                </dd>
+
+              </div>
+
+              <div>
+
+                <dt>
+                  STACK
+                </dt>
+
+                <dd>
+                  HTML · CSS · JavaScript · Node.js · Express · MongoDB Atlas · Cloudinary · Vercel
+                </dd>
+
+              </div>
+
+            </dl>
+
+            <div class="project-actions">
+
+              <button
+                class="case-link"
+                type="button"
+                data-project="noircinema"
+              >
+                Inspect case file →
+              </button>
+
+              <a
+                class="case-link"
+                href="https://noir-cinema-project-fixed.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open live site ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-preview noir-preview">
+
+          <div class="noir-browser">
+
+            <div class="noir-toolbar">
+
+              <div class="noir-window-controls" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <p>
+                noir-cinema-project-fixed.vercel.app
+              </p>
+
+              <span class="noir-live-label">
+                LIVE SITE
+              </span>
+
+            </div>
+
+            <div class="noir-live-window">
+
+              <div class="noir-fallback" aria-hidden="true">
+                <span>NOW SHOWING / 2026</span>
+                <strong>NOIR<br>CINEMA</strong>
+                <small>Movie catalogue · Movie management</small>
+                <a href="https://noir-cinema-project-fixed.vercel.app/" target="_blank" rel="noopener noreferrer">OPEN LIVE SITE ↗</a>
+              </div>
+
+              <iframe
+                src="https://noir-cinema-project-fixed.vercel.app/"
+                title="NOIR Cinema live website preview"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+          <span class="project-stamp noir-stamp">
+            LIVE BUILD / 002
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
 
     <section
       class="project-section project-hirelens"
@@ -462,7 +604,7 @@
         <div class="project-info">
 
           <div class="project-file-line">
-            <span>FILE 002</span>
+            <span>FILE 003</span>
             <span>SOLO BUILD / ACTIVE</span>
           </div>
 
@@ -512,45 +654,34 @@
         <div class="project-preview hirelens-preview">
 
           <figure class="hirelens-shot hirelens-shot-setup">
-
             <img
               src="assets/images/hirelens-setup.png"
               alt="HireLens interview setup screen"
             >
-
             <figcaption>
               01 / SESSION SETUP
             </figcaption>
-
           </figure>
 
           <figure class="hirelens-shot hirelens-shot-session">
-
             <img
               src="assets/images/hirelens-session.png"
               alt="HireLens active interview session screen"
             >
-
             <figcaption>
               02 / INTERVIEW ROOM
             </figcaption>
-
           </figure>
 
           <div class="hirelens-preview-note">
-
-            <span>
-              WORKING STAGE 01
-            </span>
-
+            <span>WORKING STAGE 01</span>
             <strong>
               Career area → role → interview → debrief.
             </strong>
-
           </div>
 
           <span class="project-stamp dark-stamp">
-            ACTIVE BUILD / 002
+            ACTIVE BUILD / 003
           </span>
 
         </div>
@@ -558,8 +689,6 @@
       </div>
 
     </section>
-
-    <!-- AURA GEN -->
 
     <section
       class="project-section project-aura"
@@ -571,7 +700,7 @@
         <div class="project-info">
 
           <div class="project-file-line">
-            <span>FILE 003</span>
+            <span>FILE 004</span>
             <span>SOLO BUILD / PLANNED</span>
           </div>
 
@@ -621,63 +750,33 @@
 
         <div class="project-preview aura-preview">
 
-          <div
-            class="aura-stage"
-            aria-hidden="true"
-          >
-
+          <div class="aura-stage" aria-hidden="true">
             <div class="aura-orbit aura-orbit-one"></div>
             <div class="aura-orbit aura-orbit-two"></div>
             <div class="aura-orbit aura-orbit-three"></div>
-
             <div class="aura-core"></div>
-
             <div class="aura-particle p1"></div>
             <div class="aura-particle p2"></div>
             <div class="aura-particle p3"></div>
             <div class="aura-particle p4"></div>
             <div class="aura-particle p5"></div>
-
           </div>
 
           <div class="aura-interface">
-
-            <span>
-              AURA//GEN
-            </span>
-
-            <strong>
-              MOOD ENGINE
-            </strong>
-
-            <small>
-              FLOW FIELD / PARTICLES / ORBIT
-            </small>
-
+            <span>AURA//GEN</span>
+            <strong>MOOD ENGINE</strong>
+            <small>FLOW FIELD / PARTICLES / ORBIT</small>
           </div>
 
           <div class="aura-status">
-
-            <span>
-              CONCEPT
-            </span>
-
-            <span>
-              CANVAS API
-            </span>
-
-            <span>
-              PWA
-            </span>
-
-            <span>
-              PNG EXPORT
-            </span>
-
+            <span>CONCEPT</span>
+            <span>CANVAS API</span>
+            <span>PWA</span>
+            <span>PNG EXPORT</span>
           </div>
 
           <span class="project-stamp aura-stamp">
-            PLANNED / 003
+            PLANNED / 004
           </span>
 
         </div>
@@ -685,8 +784,6 @@
       </div>
 
     </section>
-
-    <!-- EDUHUB -->
 
     <section
       class="project-section project-eduhub"
@@ -700,7 +797,7 @@
           <div class="project-file-line">
 
             <span>
-              FILE 004
+              FILE 005
             </span>
 
             <span>
@@ -805,7 +902,7 @@
           </div>
 
           <span class="project-stamp">
-            MY BUILD / 004
+            MY BUILD / 005
           </span>
 
         </div>
@@ -813,8 +910,6 @@
       </div>
 
     </section>
-
-    <!-- WAN -->
 
     <section
       class="project-section project-wan"
@@ -828,7 +923,7 @@
           <div class="project-file-line">
 
             <span>
-              FILE 005
+              FILE 006
             </span>
 
             <span>
@@ -910,7 +1005,6 @@
               class="wan-placeholder"
               id="wanPlaceholder"
             >
-
               <span>
                 WAN TOPOLOGY
               </span>
@@ -918,7 +1012,6 @@
               <small>
                 Add assets/images/wan-topology.png
               </small>
-
             </div>
 
           </div>
@@ -940,7 +1033,7 @@
           </div>
 
           <span class="project-stamp dark-stamp">
-            INF242 / 005
+            INF242 / 006
           </span>
 
         </div>
@@ -948,8 +1041,6 @@
       </div>
 
     </section>
-
-    <!-- FILM -->
 
     <section
       class="project-section project-film"
@@ -963,7 +1054,7 @@
           <div class="project-file-line">
 
             <span>
-              FILE 006
+              FILE 007
             </span>
 
             <span>
@@ -1058,16 +1149,18 @@
           </div>
 
           <div class="timeline">
+
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
+
           </div>
 
           <span class="project-stamp film-stamp">
-            POST / 006
+            POST / 007
           </span>
 
         </div>
@@ -1075,8 +1168,6 @@
       </div>
 
     </section>
-
-    <!-- PROFILE -->
 
     <section
       class="profile section-shell"
@@ -1112,7 +1203,7 @@
           <p>
             I’m Lex, a BSIT student building
             across frontend development,
-            QA, networking, creative coding,
+            QA, system analysis, networking, creative coding,
             and post-production.
           </p>
 
@@ -1163,8 +1254,6 @@
 
     </section>
 
-    <!-- CAPABILITIES -->
-
     <section
       class="capabilities section-shell"
       id="capabilities"
@@ -1198,7 +1287,7 @@
             HTML, CSS, JavaScript,
             responsive interfaces,
             DOM, Fetch, JSON,
-            Canvas, and Local Storage.
+            and Local Storage.
           </p>
 
         </article>
@@ -1264,8 +1353,6 @@
 
     </section>
 
-    <!-- CONTACT -->
-
     <section
       class="contact section-shell"
       id="contact"
@@ -1308,7 +1395,7 @@
             id="emailButton"
             type="button"
           >
-            Copy email
+            Add email later
           </button>
 
         </div>
@@ -1316,7 +1403,9 @@
         <small
           id="emailStatus"
           aria-live="polite"
-        ></small>
+        >
+          Portfolio email will be added before publishing.
+        </small>
 
       </div>
 
@@ -1339,8 +1428,6 @@
     </a>
 
   </footer>
-
-  <!-- PROJECT DIALOG -->
 
   <dialog
     class="project-dialog"
@@ -1459,8 +1546,6 @@
 
   </dialog>
 
-  <!-- JUMP MENU -->
-
   <dialog
     class="jump-dialog"
     id="jumpDialog"
@@ -1493,10 +1578,19 @@
       </button>
 
       <button
-        data-jump="hirelens"
+        data-jump="noircinema"
         type="button"
       >
         <span>02</span>
+        <strong>NOIR Cinema</strong>
+        <small>Web / Full-stack</small>
+      </button>
+
+      <button
+        data-jump="hirelens"
+        type="button"
+      >
+        <span>03</span>
         <strong>HireLens</strong>
         <small>Web / Speech</small>
       </button>
@@ -1505,7 +1599,7 @@
         data-jump="auragen"
         type="button"
       >
-        <span>03</span>
+        <span>04</span>
         <strong>AURA//GEN</strong>
         <small>Creative coding</small>
       </button>
@@ -1514,7 +1608,7 @@
         data-jump="eduhub"
         type="button"
       >
-        <span>04</span>
+        <span>05</span>
         <strong>EduHub</strong>
         <small>Frontend / QA</small>
       </button>
@@ -1523,7 +1617,7 @@
         data-jump="wanlab"
         type="button"
       >
-        <span>05</span>
+        <span>06</span>
         <strong>WAN Lab</strong>
         <small>Networking</small>
       </button>
@@ -1532,7 +1626,7 @@
         data-jump="hintayan"
         type="button"
       >
-        <span>06</span>
+        <span>07</span>
         <strong>Hin(taya)n</strong>
         <small>Post-production</small>
       </button>
