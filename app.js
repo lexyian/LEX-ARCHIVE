@@ -1,180 +1,107 @@
 const projects = {
   panelly: {
     file: "FILE 001",
-
-    type:
-      "Solo build",
-
-    title:
-      "Panelly",
-
-    subtitle:
-      "Availability-first manga discovery and reading platform.",
-
-    role:
-      "Designer + Developer",
-
-    year:
-      "2026",
-
-    stack:
-      "HTML · CSS · JavaScript · AniList API · MangaDex API · Jikan API · Local Storage · Vercel",
-
-    status:
-      "Live / core build completed",
-
-    preview:
-      "assets/images/panelly.jpg",
-
-    description:
-      "Panelly is an availability-first manga discovery and reading interface that combines series discovery, GL/BL and origin-focused browsing, available chapters, bookmarks, and locally stored reading progress.",
-
+    type: "Solo build",
+    title: "Panelly",
+    subtitle: "Manga discovery and reading platform.",
+    role: "Designer + Developer",
+    year: "2026",
+    stack: "HTML · CSS · JavaScript · AniList API · MangaDex API · Local Storage · Vercel",
+    status: "Live build",
+    previewType: "iframe",
+    previewUrl: "https://panelly-delta.vercel.app/",
+    description: "Panelly is a manga discovery and reading interface that combines series discovery, manga information, available chapters, bookmarks, and reading progress.",
     contribution: [
       "Designed the responsive interface and visual identity.",
-      "Built search, genre, GL/BL, manga, manhwa, and manhua discovery flows.",
-      "Used external APIs for catalog information and available hosted chapters instead of maintaining an independent manga library.",
+      "Built search, browse, detail, and reader experiences.",
+      "Used AniList for catalog information and MangaDex for available hosted chapters.",
       "Added bookmarks and Continue Reading using Local Storage.",
       "Deployed and tested the project on Vercel."
     ],
-
     links: [
-      {
-        label:
-          "Live site ↗",
+      { label: "Live site ↗", url: "https://panelly-delta.vercel.app/" },
+      { label: "GitHub ↗", url: "https://github.com/lexyian/Panelly" }
+    ]
+  },
 
-        url:
-          "https://panelly-delta.vercel.app/"
-      },
-
-      {
-        label:
-          "GitHub ↗",
-
-        url:
-          "https://github.com/lexyian/Panelly"
-      }
+  noircinema: {
+    file: "FILE 002",
+    type: "Solo build",
+    title: "NOIR Cinema",
+    subtitle: "Cinema website with a dynamic movie catalogue and movie-management workflow.",
+    role: "Designer + Developer",
+    year: "2026",
+    stack: "HTML · CSS · JavaScript · Node.js · Express · MongoDB Atlas · Cloudinary · Vercel",
+    status: "Live deployment",
+    previewType: "iframe",
+    previewUrl: "https://noir-cinema-project-fixed.vercel.app/",
+    description: "NOIR Cinema is a cinema-themed web application built around a movie catalogue and movie-management workflow. Its frontend communicates with an Express API, movie records are stored in MongoDB Atlas, and poster images are hosted through Cloudinary.",
+    contribution: [
+      "Designed and developed the cinema website interface.",
+      "Connected the frontend to Express API routes for movie listing and movie management.",
+      "Implemented persistent movie records using MongoDB Atlas.",
+      "Integrated Cloudinary for poster uploads and persistent image storage.",
+      "Configured the project for deployment on Vercel."
+    ],
+    links: [
+      { label: "Open live NOIR Cinema ↗", url: "https://noir-cinema-project-fixed.vercel.app/" }
     ]
   },
 
   hirelens: {
-    file:
-      "FILE 002",
-
-    type:
-      "Solo build / active",
-
-    title:
-      "HireLens",
-
-    subtitle:
-      "Interview practice studio for students, fresh graduates, career shifters, and job seekers.",
-
-    role:
-      "Designer + Developer",
-
-    year:
-      "2026",
-
-    stack:
-      "HTML · CSS · JavaScript · Web Speech API · Vercel",
-
-    status:
-      "Stage 1 working / AI layer planned",
-
-    preview:
-      "assets/images/hirelens-setup.png",
-
-    description:
-      "HireLens is a career-spanning interview practice product with career-area and job-role selection, behavioral and role-specific question flows, typed or spoken answers, browser transcription, timers, progress tracking, and a session debrief. The secure AI feedback layer is planned for a later stage.",
-
+    file: "FILE 003",
+    type: "Solo build",
+    title: "HireLens",
+    subtitle: "Interview practice platform for students, fresh graduates, and job seekers.",
+    role: "Designer + Developer",
+    year: "2026",
+    stack: "HTML · CSS · JavaScript · Web Speech API · Vercel",
+    status: "Stage 1 in build",
+    preview: "",
+    fallback: "HL / 003",
+    description: "HireLens is an interview-practice product built around realistic question flows, spoken or typed answers, timers, session review, and a later secure AI feedback layer.",
     contribution: [
-      "Designed the editorial Interview Studio interface and responsive session flow.",
-      "Expanded setup beyond IT into multiple career areas with role and custom-role selection.",
-      "Built behavioral, role-specific, difficulty, and question-count logic for preset practice.",
-      "Implemented typed answers, timers, word counts, session progress, and results review.",
-      "Added browser speech recognition with a typed fallback and preserved editable transcripts.",
-      "Kept AI feedback, authentication, and saved sessions clearly separated as future stages."
+      "Designed the product direction and responsive interview flow.",
+      "Built role, interview type, difficulty, and question-count setup.",
+      "Implemented typed answers, timers, word counts, and progress tracking.",
+      "Added browser speech recognition with typed fallback.",
+      "Structured the project so AI and saved sessions can be added later."
     ],
-
     links: []
   },
 
   auragen: {
-    file:
-      "FILE 003",
-
-    type:
-      "Solo build / planned",
-
-    title:
-      "AURA//GEN",
-
-    subtitle:
-      "Interactive Generative Art Studio.",
-
-    role:
-      "Designer + Developer",
-
-    year:
-      "2026",
-
-    stack:
-      "HTML · CSS · JavaScript · Canvas API · Local Storage · PWA",
-
-    status:
-      "Concept in development",
-
-    preview:
-      "",
-
-    fallback:
-      "A/G / 003",
-
-    description:
-      "AURA//GEN is a planned creative-coding web application and installable PWA where users will create animated artwork through flow fields, particle systems, orbital motion, moods, palettes, seeded generation, pointer interaction, saved presets, and image export.",
-
+    file: "FILE 004",
+    type: "Solo concept",
+    title: "AURA//GEN",
+    subtitle: "Planned interactive generative art studio and installable PWA.",
+    role: "Designer + Developer",
+    year: "2026",
+    stack: "HTML · CSS · Vanilla JavaScript · Canvas API · Local Storage · PWA concepts",
+    status: "Concept in development",
+    preview: "",
+    fallback: "AURA / 004",
+    description: "AURA//GEN is a planned generative art studio where movement, mood, color, and code shape interactive visuals. The concept includes a Canvas-based visual engine, presets, local saving, and image export.",
     contribution: [
-      "Defined the product concept, creative direction, and phased development plan.",
-      "Planned Flow Field, Particle System, Orbit, and Fractal Garden generator modes.",
-      "Designed a Mood Engine concept that changes multiple visual parameters through emotional presets.",
-      "Planned seeded generation, palette controls, local saved creations, PNG export, and PWA support.",
-      "Keeping advanced Mood Canvas, audio-reactive visuals, and animation recording as later phases rather than presenting them as completed features."
+      "Developed the visual direction and interaction concept.",
+      "Planned a Canvas-based generator with multiple visual modes.",
+      "Outlined mood-based presets and live visual controls.",
+      "Planned local saving, PNG export, and installable PWA support."
     ],
-
     links: []
   },
 
   eduhub: {
-    file:
-      "FILE 004",
-
-    type:
-      "Team project",
-
-    title:
-      "EduHub",
-
-    subtitle:
-      "K–12 educational platform with resources, study tools, and learning activities.",
-
-    role:
-      "Frontend Contributor + QA Tester",
-
-    year:
-      "2026",
-
-    stack:
-      "HTML · CSS · JavaScript · GitHub",
-
-    status:
-      "Completed academic project",
-
-    preview:
-      "assets/images/learning_resource.jpeg",
-
-    description:
-      "EduHub is a team-built educational platform. My work went beyond QA: I built the Learning Resources experience shown in this portfolio, including the resource browsing page and PDF resource viewer.",
-
+    file: "FILE 005",
+    type: "Team project",
+    title: "EduHub",
+    subtitle: "K–12 educational platform with resources, study tools, and learning activities.",
+    role: "Frontend Contributor + QA Tester",
+    year: "2026",
+    stack: "HTML · CSS · JavaScript · GitHub",
+    status: "Completed academic project",
+    preview: "assets/images/learning_resource.jpeg",
+    description: "EduHub is a team-built educational platform. My work went beyond QA: I built the Learning Resources experience shown in this portfolio, including the resource browsing page and PDF resource viewer.",
     contribution: [
       "Built the Learning Resources page shown in the project screenshots.",
       "Built the PDF resource viewing experience used to open and navigate learning materials.",
@@ -182,52 +109,23 @@ const projects = {
       "Tested pages and interactive features for bugs and usability issues.",
       "Helped verify fixes before submission."
     ],
-
     links: [
-      {
-        label:
-          "GitHub ↗",
-
-        url:
-          "https://github.com/villgrum/EduHub"
-      }
+      { label: "GitHub ↗", url: "https://github.com/villgrum/EduHub" }
     ]
   },
 
   wanlab: {
-    file:
-      "FILE 005",
-
-    type:
-      "Pair laboratory",
-
-    title:
-      "WAN Technologies Lab",
-
-    subtitle:
-      "Router-to-router WAN configuration using PPP and static routing.",
-
-    role:
-      "Network Configuration",
-
-    year:
-      "2026",
-
-    stack:
-      "Cisco Packet Tracer · PPP · IPv4 · Static Routing · Ping · Traceroute",
-
-    status:
-      "Completed laboratory",
-
-    preview:
-      "assets/images/wan-topology.png",
-
-    previewClass:
-      "topology",
-
-    description:
-      "A WAN Technologies laboratory connecting an HQ network and a branch network through two routers, with PPP on the serial link and route verification across both LANs.",
-
+    file: "FILE 006",
+    type: "Pair laboratory",
+    title: "WAN Technologies Lab",
+    subtitle: "Router-to-router WAN configuration using PPP and static routing.",
+    role: "Network Configuration",
+    year: "2026",
+    stack: "Cisco Packet Tracer · PPP · IPv4 · Static Routing · Ping · Traceroute",
+    status: "Completed laboratory",
+    preview: "assets/images/wan-topology.png",
+    previewClass: "topology",
+    description: "A WAN Technologies laboratory connecting an HQ network and a branch network through two routers, with PPP on the serial link and route verification across both LANs.",
     contribution: [
       "Configured the HQ and branch network devices with my laboratory partner.",
       "Set up the serial WAN connection between the two routers.",
@@ -235,52 +133,28 @@ const projects = {
       "Checked routing tables and static routes.",
       "Validated end-device connectivity using ping and traceroute."
     ],
-
     links: []
   },
 
   hintayan: {
-    file:
-      "FILE 006",
-
-    type:
-      "Creative project",
-
-    title:
-      "Hin(taya)n",
-
-    subtitle:
-      "Short-film post-production project.",
-
-    role:
-      "Editor",
-
-    year:
-      "2026",
-
-    stack:
-      "DaVinci Resolve · Edit · Fusion · Color · Fairlight",
-
-    status:
-      "Academic film project",
-
-    preview:
-      "",
-
-    fallback:
-      "H(T) / 006",
-
-    description:
-      "Hin(taya)n is a short-film project where I handled editing work across the main film and promotional cuts, with attention to pacing, transitions, color, audio, titles, stabilization, and continuity.",
-
+    file: "FILE 007",
+    type: "Creative project",
+    title: "Hin(taya)n",
+    subtitle: "Short-film post-production project.",
+    role: "Editor",
+    year: "2026",
+    stack: "DaVinci Resolve · Edit · Color · Fairlight",
+    status: "Academic film project",
+    preview: "",
+    fallback: "H(T) / 007",
+    description: "Hin(taya)n is a short-film project where I handled editing work across the main film and promotional cuts, with attention to pacing, transitions, color, audio, titles, and continuity.",
     contribution: [
-      "Edited the full film, teaser, and trailer.",
-      "Worked on pacing, POV and flashback transitions, stabilization, and continuity.",
+      "Edited the full film and promotional cuts.",
+      "Worked on pacing, transitions, and continuity.",
       "Developed separate visual looks for present-day and flashback scenes.",
       "Handled audio cleanup, ambience, and supporting sound effects.",
-      "Built titles, logo animation, and other post-production elements in DaVinci Resolve."
+      "Built titles and other post-production elements in DaVinci Resolve."
     ],
-
     links: []
   }
 };
@@ -407,16 +281,34 @@ function renderDialogPreview(
     "dialog-preview";
 
   if (
+    project.previewType === "iframe" &&
+    project.previewUrl
+  ) {
+    dialogPreview.classList.add(
+      "noir-dialog-preview"
+    );
+
+    dialogPreview.innerHTML = `
+      <iframe
+        src="${project.previewUrl}"
+        title="${project.title} live preview"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    `;
+
+    return;
+  }
+
+  if (
     project.preview
   ) {
     if (
       project.previewClass
     ) {
-      dialogPreview
-        .classList
-        .add(
-          project.previewClass
-        );
+      dialogPreview.classList.add(
+        project.previewClass
+      );
     }
 
     dialogPreview.innerHTML = `
@@ -442,9 +334,7 @@ function openProject(
   projectKey
 ) {
   const project =
-    projects[
-      projectKey
-    ];
+    projects[projectKey];
 
   if (!project) {
     return;
@@ -519,13 +409,11 @@ function openProject(
   );
 
   document.body
-    .classList
-    .add(
+    .classList.add(
       "dialog-open"
     );
 
-  projectDialog
-    .showModal();
+  projectDialog.showModal();
 }
 
 function closeProject() {
@@ -536,8 +424,7 @@ function closeProject() {
   }
 
   document.body
-    .classList
-    .remove(
+    .classList.remove(
       "dialog-open"
     );
 }
@@ -548,66 +435,57 @@ document
   )
   .forEach(
     (button) => {
-      button
-        .addEventListener(
-          "click",
-          () => {
-            openProject(
-              button.dataset
-                .project
-            );
-          }
-        );
+      button.addEventListener(
+        "click",
+        () => {
+          openProject(
+            button.dataset.project
+          );
+        }
+      );
     }
   );
 
-dialogClose
-  .addEventListener(
-    "click",
-    closeProject
-  );
+dialogClose.addEventListener(
+  "click",
+  closeProject
+);
 
-projectDialog
-  .addEventListener(
-    "click",
-    (event) => {
-      if (
-        event.target ===
-        projectDialog
-      ) {
-        closeProject();
-      }
+projectDialog.addEventListener(
+  "click",
+  (event) => {
+    if (
+      event.target ===
+      projectDialog
+    ) {
+      closeProject();
     }
-  );
+  }
+);
 
-projectDialog
-  .addEventListener(
-    "close",
-    () => {
-      document.body
-        .classList
-        .remove(
-          "dialog-open"
-        );
-    }
-  );
+projectDialog.addEventListener(
+  "close",
+  () => {
+    document.body
+      .classList.remove(
+        "dialog-open"
+      );
+  }
+);
 
-jumpButton
-  .addEventListener(
-    "click",
-    () => {
-      jumpDialog
-        .showModal();
-    }
-  );
+jumpButton.addEventListener(
+  "click",
+  () => {
+    jumpDialog.showModal();
+  }
+);
 
-jumpClose
-  .addEventListener(
-    "click",
-    () => {
-      jumpDialog.close();
-    }
-  );
+jumpClose.addEventListener(
+  "click",
+  () => {
+    jumpDialog.close();
+  }
+);
 
 jumpDialog
   .querySelectorAll(
@@ -615,72 +493,66 @@ jumpDialog
   )
   .forEach(
     (button) => {
-      button
-        .addEventListener(
-          "click",
-          () => {
-            const target =
-              document
-                .getElementById(
-                  button.dataset
-                    .jump
-                );
+      button.addEventListener(
+        "click",
+        () => {
+          const target =
+            document.getElementById(
+              button.dataset.jump
+            );
 
-            jumpDialog.close();
+          jumpDialog.close();
 
-            target
-              ?.scrollIntoView({
-                behavior:
-                  "smooth"
-              });
-          }
-        );
-    }
-  );
-
-document
-  .addEventListener(
-    "keydown",
-    (event) => {
-      const activeElement =
-        document.activeElement;
-
-      const tagName =
-        activeElement
-          ?.tagName;
-
-      if (
-        event.key === "/" &&
-        tagName !== "INPUT" &&
-        tagName !== "TEXTAREA" &&
-        !projectDialog.open
-      ) {
-        event.preventDefault();
-
-        if (
-          !jumpDialog.open
-        ) {
-          jumpDialog
-            .showModal();
+          target?.scrollIntoView({
+            behavior:
+              "smooth"
+          });
         }
-      }
-
-      if (
-        event.key ===
-          "Escape" &&
-        jumpDialog.open
-      ) {
-        jumpDialog.close();
-      }
+      );
     }
   );
 
-randomProjectButton
-  .addEventListener(
-    "click",
-    () => {
-      const keys = [
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const activeElement =
+      document.activeElement;
+
+    const tagName =
+      activeElement?.tagName;
+
+    if (
+      event.key === "/" &&
+      tagName !== "INPUT" &&
+      tagName !== "TEXTAREA" &&
+      !projectDialog.open
+    ) {
+      event.preventDefault();
+
+      if (
+        !jumpDialog.open
+      ) {
+        jumpDialog.showModal();
+      }
+    }
+
+    if (
+      event.key ===
+        "Escape" &&
+      jumpDialog.open
+    ) {
+      jumpDialog.close();
+    }
+  }
+);
+
+randomProjectButton.addEventListener(
+  "click",
+  () => {
+    const keys =
+      [
         "panelly",
+        "noircinema",
         "hirelens",
         "auragen",
         "eduhub",
@@ -688,29 +560,28 @@ randomProjectButton
         "hintayan"
       ];
 
-      const randomKey =
-        keys[
-          Math.floor(
-            Math.random() *
-            keys.length
-          )
-        ];
-
-      document
-        .getElementById(
-          randomKey
+    const randomKey =
+      keys[
+        Math.floor(
+          Math.random() *
+          keys.length
         )
-        ?.scrollIntoView({
-          behavior:
-            "smooth"
-        });
-    }
-  );
+      ];
+
+    document
+      .getElementById(
+        randomKey
+      )
+      ?.scrollIntoView({
+        behavior:
+          "smooth"
+      });
+  }
+);
 
 function updateScrollProgress() {
   const totalHeight =
-    document
-      .documentElement
+    document.documentElement
       .scrollHeight -
     window.innerHeight;
 
@@ -722,70 +593,50 @@ function updateScrollProgress() {
         ) * 100
       : 0;
 
-  scrollProgress
-    .style
-    .width =
-      `${Math.min(
-        100,
-        Math.max(
-          0,
-          percentage
-        )
-      )}%`;
+  scrollProgress.style.width =
+    `${Math.min(
+      100,
+      Math.max(
+        0,
+        percentage
+      )
+    )}%`;
 }
 
-window
-  .addEventListener(
-    "scroll",
-    updateScrollProgress,
-    {
-      passive: true
-    }
-  );
+window.addEventListener(
+  "scroll",
+  updateScrollProgress,
+  {
+    passive: true
+  }
+);
 
 updateScrollProgress();
 
 if (
   wanTopologyImage
 ) {
-  wanTopologyImage
-    .addEventListener(
-      "load",
-      () => {
-        if (
-          wanPlaceholder
-        ) {
-          wanPlaceholder
-            .style
-            .display =
-              "none";
-        }
-      }
-    );
+  wanTopologyImage.addEventListener(
+    "load",
+    () => {
+      wanPlaceholder.style.display =
+        "none";
+    }
+  );
 
-  wanTopologyImage
-    .addEventListener(
-      "error",
-      () => {
-        wanTopologyImage
-          .style
-          .display =
-            "none";
+  wanTopologyImage.addEventListener(
+    "error",
+    () => {
+      wanTopologyImage.style.display =
+        "none";
 
-        if (
-          wanPlaceholder
-        ) {
-          wanPlaceholder
-            .style
-            .display =
-              "grid";
-        }
-      }
-    );
+      wanPlaceholder.style.display =
+        "grid";
+    }
+  );
 }
 
-const portfolioEmail =
-  "lexpanerio@gmail.com";
+const portfolioEmail = "lexpanerio@gmail.com";
 
 if (
   portfolioEmail
@@ -794,34 +645,30 @@ if (
     "Copy email";
 }
 
-emailButton
-  .addEventListener(
-    "click",
-    async () => {
-      if (
-        !portfolioEmail
-      ) {
-        emailStatus
-          .textContent =
-            "Email is not available yet.";
+emailButton.addEventListener(
+  "click",
+  async () => {
+    if (
+      !portfolioEmail
+    ) {
+      emailStatus.textContent =
+        "Add your portfolio email inside app.js before publishing.";
 
-        return;
-      }
-
-      try {
-        await navigator
-          .clipboard
-          .writeText(
-            portfolioEmail
-          );
-
-        emailStatus
-          .textContent =
-            "Email copied.";
-      } catch {
-        emailStatus
-          .textContent =
-            portfolioEmail;
-      }
+      return;
     }
-  );
+
+    try {
+      await navigator
+        .clipboard
+        .writeText(
+          portfolioEmail
+        );
+
+      emailStatus.textContent =
+        "Email copied.";
+    } catch {
+      emailStatus.textContent =
+        portfolioEmail;
+    }
+  }
+);
